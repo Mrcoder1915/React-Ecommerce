@@ -19,10 +19,11 @@ a{
     height: 80%;
     background-color: rgb(33, 31, 31);
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
-    padding:120px 5% 50px 5%;
+    padding: 5% 0;
     .itemsContainer{
         width: 200px;
         height: 400px;
