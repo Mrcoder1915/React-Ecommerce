@@ -17,9 +17,9 @@ const Ratings = (props) => {
         <div className='Rating-Container'>          
            <div className='profile-image'>
               <img src="" alt="profile" />
-              <h1 style={{color:'white'}}> {ratings.commenter}</h1>
+              <h1> {ratings.commenter}</h1>
            </div>
-            <h1 style={{color:'white'}}> {ratings.comment}</h1>
+            <p style={{color:'white'}}> {ratings.comment}</p>
         </div>
        ))}      
        </div>
