@@ -9,6 +9,7 @@ const CheckOut = () => {
   const checkedItem = Items.filter(item => cheked[item.id])
   const [loading,setLoading] = useState(false)
   const Total = totalCartItem()
+  const Price = Total.toLocaleString('En-Us')
   const [showPaymentMethods, setShowPaymentMethods] = useState(false);
   const [selectedPaymentMethods, setSelectedPaymentMethods] = useState("Cash On Delivery");
 
@@ -79,7 +80,7 @@ const CheckOut = () => {
             {
               Total > 0 ?
               <div className="Confirm">
-                <h2>php: {Total}</h2>
+                <h2>php: {Price}</h2>
                 <button>Confirm Orders</button>                   
               </div>:
                 <h2></h2>  

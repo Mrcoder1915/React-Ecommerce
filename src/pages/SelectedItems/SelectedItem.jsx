@@ -10,6 +10,7 @@ import { Sellers } from '../../ProductDb';
 import Ratings from './Ratings'
 import { FaCartArrowDown } from "react-icons/fa";
 import { FaBoxOpen } from "react-icons/fa";
+import Footer from '../../shared/components/Partials/Footer/Footer';
 
 const SelectedItem = () => {
     const {id} = useParams()
@@ -37,7 +38,6 @@ const SelectedItem = () => {
             <div className="Description">
                 <div className="productaName">
                     <h2>{Item.productName}</h2>
-
                     <div className='addBtn' >
                     <button className={`cart-button ${buttonClick? 'clicked' : ''}`} onClick={() => {addToCart(Item.id);cartClick()}}>
                         <span className="add-to-cart">Add to cart</span>
@@ -67,8 +67,10 @@ const SelectedItem = () => {
                   ))}
               </div>
           </div> 
-          }           
+          }       
+             
         </div>
+        <Footer/>  
     </div>
   )
 }

@@ -20,10 +20,11 @@ function App() {
               <Route path="/"  element = {<Shop />} />
               <Route path="/Profile"  element = {<Profile />} />  
               <Route path="/Search" element = {<Search/>}/>
+              <Route path="/SelectedItem/:id" element = {<SelectedItem />} />
             </Route>
             <Route element = {<CartLayout/>}>
               <Route path="/Cart"  element = {<Cart />} />
-              <Route path="/SelectedItem/:id" element = {<SelectedItem />} />
+              
               <Route path="/CheckOut" element = {<CheckOut />}/>
             </Route>
               <Route path="*"  element = {<NotFound />} />

@@ -1,9 +1,51 @@
 .Footer footer{
-    position: relative;
-    height: 80px;
+    position: fixed;
+    bottom: 0;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ECDFCC;
+    z-index: 100;
+}
+.Footer .cart{
+    display: none;
+    position: absolute;
+    right: 20px;
+    font-size: 40px;
+}
+.cart span{
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    border-radius: 100%;
+    width: 15px;
+    background-color: red;
+    text-align: center;
+}
+.Home-profile{
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+.Home-profile span{
+    font-size: 30px;
+}
+@media only screen and (max-width: 600px){
+    .Footer footer{
+        height: 60px;
+    }
+    footer h3{
+        position: absolute;
+        left: 10px;
+    }
+    .Footer .cart{
+        display: block;
+    }
+    .Home-profile{
+        display: flex;
+    }
 }

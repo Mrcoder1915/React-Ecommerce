@@ -3,14 +3,13 @@
     background-color: black;
     display: flex;
     justify-content: center;
-
 }
 .Container{ 
     width: 80%;
     min-height: 100vh;
     max-height: auto;
     background-color: black;
-    margin-top: 100px;
+    margin: 100px 0;
 }
 .productContainer{
     width: 100%;
@@ -20,33 +19,34 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    border-radius: 20px;
-    .imgMain{
-        position: relative;
-        width: 500px;
-        height: 100%;
-        overflow: hidden;
-        background: rgba(0,0,0,.50);
-        border-radius: 30px;
-    .imgContainer{
-        position: relative;
-        width: 100%;
-        border-radius: 30px;
-        padding-top: 100%;
-        overflow: hidden;
-        box-sizing: border-box;
-         img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            object-fit: cover;
-            object-position: center;
-         }
-    }
+    border-radius: 20px;       
 }
+.productContainer .imgMain{
+    position: relative;
+    width: 500px;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,.50);
+    border-radius: 30px;
+}
+.imgMain .imgContainer{
+    position: relative;
+    width: 100%;
+    border-radius: 30px;
+    padding-top: 110%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.imgContainer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+ 
 }
 
 .Description{
@@ -63,7 +63,6 @@
         width: 100%;
         position: relative;
         text-align: center;
-  
     }
     .selectedItemDes{
         margin-top: 20px;
@@ -207,80 +206,82 @@
     border-radius: 20px;
     justify-content: center;
     padding: 20px 0 20px 0;
-    .mainContainer{
-        width: 90%;
-        height: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 20px;
-    }
-    .relatedItemContainer{
-            width: 150px;
-            height: 300px;
-            border-radius: 20px;
-            background-color: rgba(0,0,0,.50);
-            overflow: hidden;
-            .imgContainer{
-                position: relative;
-                padding-top: 100%;
-                overflow: hidden;
-                box-sizing: border-box;
-                width: 100%;
-                height: 50%;
-                margin-bottom: 10px;
-                img{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    border-radius:  20px 20px 0 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
-           }
-           
-    }
-    .product-info{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        color: white;
-        gap: 10px;
-       }
 }
+.relatedItem .product-info{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 10px;
+   }
+.relatedItem .mainContainer{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+.relatedItem .relatedItemContainer{
+    width: 150px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: rgba(1,0,0,.50);
+    overflow: hidden;
+}
+.relatedItemContainer .imgContainer{
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+.imgContainer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius:  20px 20px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .sellerInfoContainer{
     width: 100%;
     height: 70px;
     background-color: rgba(225,225,225,.5);
     margin-top: 20px;
     border-radius: 20px;
-    padding: 10px 20px;
-    .sellerInfo{
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        .profile-Name-container, .No-products, .Ratings, .Respones{
-            height: 100%;
-            display: flex;
-            align-items: center;
-            color: white;
-            font-size: 15px;
-        }
-    }
-    .sellerProfile{
-        width: 50px;
-        height: 50px;
-        border: 2px solid white;
-        border-radius: 100%;
-        margin:0 5px 0 20px;
-    }
+    padding: 10px 20px;  
 }
+.sellerInfo{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.sellerInfo .profile-Name-container, .No-products, .Ratings, .Respones{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+}
+.sellerProfile{
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 100%;
+    margin:0 5px 0 20px;
+}
+
 .itemDescriptionContainer{
     position: relative;
     width: 100%;
@@ -289,44 +290,89 @@
     background-color: rgba(225,225,225,.5);
     border-radius: 20px;
     padding: 10px 10px 50px 10px;
-    margin-top: 20px;
-    .itemDescriptions{
+    margin-top: 20px;  
+}
+.itemDescriptionContainer .itemDescriptions{
+    width: 100%;
+    height: 55px;
+    overflow: hidden;
+    line-height: 1.1;
+    /* background-color: #fff; */
+}
+.itemDescriptionContainer .itemDescriptions.showmore{
+    height: auto;
+}
+.itemDescriptionContainer .btnShow{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: 20px 5px 5px 5px;
+}
+.btnShow button{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid black;
+    font-size: 15px;
+    font-weight: 500;
+}
+.btnShow button:hover{
+    transform: scale(1.1);
+}
+.btnShow button:active{
+    background-color: #9f9595;
+}
+.itemDescriptionContainer h2{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.itemDescriptionContainer h3{
+    font-size: 18px;
+    color: white;
+}
+@media only screen and (max-width: 600px){
+    .productContainer{
+        height: 450px;
+        flex-direction: column;
+        gap: 0;
+    }
+    .productContainer .imgMain{
         width: 100%;
-        height: 55px;
-        overflow: hidden;
-        line-height: 1.1;
-        /* background-color: #fff; */
     }
-    .itemDescriptions.showmore{
-        height: auto;
-    }
-    .btnShow{
+    .relatedItem .mainContainer{
         width: 100%;
-        position: absolute;
-        bottom: 0;
-        margin: 20px 5px 5px 5px;
-        button{
-            width: 120px;
-            height: 40px;
-            border-radius: 20px;
-            border: 2px solid black;
-            font-size: 15px;
-            font-weight: 500;
-            &:hover{
-                transform: scale(1.1);
-            }
-            &:active{
-                background-color: #9f9595;
-            }
-        }
     }
-    h2{
-        text-align: center;
-        text-decoration: underline;
-        margin-bottom: 10px;
+    .Description{
+        background:none;
+        height: 200px;
     }
-    h3{
-        font-size: 18px;
-        color: white;
+    .productaName{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+    }
+    .addBtn{
+        position: relative;
+    }
+    /* .cart-button{
+        width: 250px;
+    } */
+    .relatedItem  .relatedItemContainer{
+        width: 120px;
+        height: 240px;  
+    }
+    .relatedItem .product-info{
+        font-size: 12px;
+    }
+    .sellerInfoContainer{
+        height: 200px;
+    }
+    .sellerInfo{
+        flex-direction: column;
+    }
+    .sellerProfile{
+        margin-left: 0;
     }
 }

@@ -14,10 +14,10 @@
         flex-direction: column;
         overflow: hidden;
         gap: 10px;
-    .titleHeader{
+         .titleHeader{
         text-align: center;
     }
-    .Rating-Container{
+     .Rating-Container{
         width: 100%;
         height: auto;
         display: flex;
@@ -62,4 +62,9 @@
 }
 .rating-main.showmore{
     height: auto;
+}
+@media only screen and (max-width: 600px){
+    .Rating .rating-main{
+        height: 550px;
+    }
 }

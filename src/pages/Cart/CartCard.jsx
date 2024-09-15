@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext } from 'react'
 import { shopContext } from '../shopcontext';
 const CartCard = (props) => {
-    const {id , productName, price, description, productImage} = props.data;
-    const {Cart,addingQuantity, subtractQuantity, updateQuantity,checked, toggleIsCheck} = useContext(shopContext)
+    const {id , productName, price, productImage} = props.data;
+    const {Cart,addingQuantity, subtractQuantity, updateQuantity, toggleIsCheck} = useContext(shopContext)
    //  const [isCheck, setIsCheck] = useState(false)
 
    //  const toggleIsCheck = () => {

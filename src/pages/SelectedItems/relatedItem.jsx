@@ -8,9 +8,9 @@ const relatedItem = (props) => {
     
   return (
     <Link to=  {`/SelectedItem/${id}`} onClick = {scrolltotop}>
-      <div  className='relatedItemContainer'>
+      <div  className='relatedItemContainer' >
           <div className="imgContainer">
-                <img src={productImage} alt="" />
+                <img src={productImage} alt="" loading = 'lazy'/>
           </div>
           <div className='product-info'>
             <h2>{Price}</h2>

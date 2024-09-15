@@ -16,24 +16,7 @@ header{
     align-items: center;
     padding: 10px 30px;
     z-index: 100;
-    .searchContainer{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        input{
-            width: 50%;
-            height: 50px;
-            border-radius: 20px;
-            font-size: 20px;
-            padding: 10px;
-            background-color: #2a2828;
-            outline: none;
-            border: none;
-            color: white;
-        }
-    }
+
      h2{
         font-size:30px;
         cursor: pointer;
@@ -73,4 +56,36 @@ header{
                 text-align: center;
             }
       }
+}
+.searchContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        width: 50%;
+        height: 50px;
+        border-radius: 20px;
+        font-size: 20px;
+        padding: 10px;
+        background-color: #2a2828;
+        outline: none;
+        border: none;
+        color: white;
+    }
+}
+@media only screen and (max-width: 600px){
+    header{
+        padding: 5px;
+    }
+    li{
+        display: none;
+    }
+    .searchContainer {
+        margin-left: 10px;
+        input{
+            width: 100%;
+        }
+    }
 }
